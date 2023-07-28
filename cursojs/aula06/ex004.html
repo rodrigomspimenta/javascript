@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=http://127.0.0.1:5500/aula06/ex003.html, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt Arial
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //Formatação de Strings
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras. <br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLocaleLowerCase()}`)
+
+        //Formatação de Números
+        // var n1 = 1545.5
+        // n1.toFixed(2) - Para exibir duas casas decimais
+        // n1.toFixed(2).replace('.', ',') - Para substituir o . por ,
+        //n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) - Pare exibir o valor em moeda brasileira (Real) -currency: 'USD' para dólar, por exemplo- 
+        
+    </script>
+</body>
+
+</html>
