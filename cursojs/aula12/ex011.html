@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleições</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #b47ce294;
+        }
+
+        h1 {
+            color: rgb(130, 21, 233);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.3em;
+            width: 325px;
+            background-color: rgba(139, 139, 233, 0.719);
+            margin: auto;
+            padding: 10px;
+            border-radius: 3px;
+            box-shadow: 1px 1px 5px black;
+        }
+
+        div {
+            width: 180px;
+        }
+
+        h2 {
+            color: rgb(0, 0, 0);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: .9em;
+            font-weight: bold;
+            margin: 45px 0px 0px 20px;
+        }
+
+        h2 input#btn {
+            margin: 0;
+            width: 50px;
+        }
+
+        input {
+            padding: 3px;
+            width: 200px;
+            margin-left: 20px;
+        }
+
+        div#res {
+            margin: 15px 0px 0px 25px;
+            color: rgb(130, 21, 233);
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.3em;
+            width: 325px;
+            padding: 10px;
+            border-radius: 3px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Saiba se você deve ou não votar</h1>
+
+    <h2>Qual a sua idade?<input type="number" name="idade" id="idade"> <input type="button" value="Enviar" name="btn" id="btn" onclick="enviar()"></h2>
+    <div id="res"></div>
+    <script>
+        function enviar() {
+            var iidade = window.document.querySelector('input#idade')
+            var idade = (iidade.value)
+            var res = window.document.querySelector('div#res')
+            if (idade < 16) {
+                res.innerHTML = 'Não vota'
+            } else if (idade < 18 || idade > 65) {
+                res.innerHTML = 'Voto opcional'
+            } else {
+                res.innerHTML = 'VOTO OBRIGATÓRIO'
+            }
+
+        }
+    </script>
+</body>
+
+</html>
